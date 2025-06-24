@@ -22,5 +22,3 @@ class Scoreboard(GameElement):
         self.turtle.clear()
         self.turtle.goto(0, 0)
         self.turtle.write(f"Game Over! Final Score: {self.score}", align="center", font=("Momcake", 28, "normal"))
-
-    
