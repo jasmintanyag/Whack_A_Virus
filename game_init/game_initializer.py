@@ -47,4 +47,8 @@ class WhackAVirusGame:
         self.virus.on_click(self.virus_clicked)
         pygame.mixer.music.play(-1) # Loops bg music
 
+    def virus_clicked(self, x, y):
+        self.scoreboard.increment()
+        self.score_sound.play()
+
     
