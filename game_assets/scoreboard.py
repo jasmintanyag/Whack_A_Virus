@@ -12,4 +12,7 @@ class Scoreboard(GameElement):
     def update(self):
         self.turtle.clear()
         self.turtle.write(f"Score: {self.score}", align="center", font=("Momcake", 24, "normal"))
-        
+
+    def increment(self):
+        self.score += 1
+        winsound.PlaySound("sounds/")
