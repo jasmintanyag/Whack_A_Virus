@@ -7,3 +7,5 @@ from game_assets.scoreboard import Scoreboard
 from game_assets.timer import Timer
 from game_assets.start_button import StartButton
 
+class WhackAVirusGame:
+    def __init__(self):
