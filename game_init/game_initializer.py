@@ -57,4 +57,5 @@ class WhackAVirusGame:
         pygame.mixer.music.stop()
         self.gameover_sound.play()
 
-    
+    def run(self):
+        turtle.mainloop()
