@@ -11,4 +11,8 @@ class WhackAVirusGame:
     def __init__(self):
         # Initialize pygame mixer
         pygame.mixer.init()
+        # Load sounds from sounds folder
+        pygame.mixer.music.load(os.path.join("sounds", "background.wav"))
+        self.gameover_sound = pygame.mixer.Sound(os.path.join("sounds", "gameover.wav"))
+        self.score_sound = pygame.mixer.Sound(os.path.join("sounds", "score.wav"))
         
