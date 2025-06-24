@@ -20,4 +20,8 @@ class WhackAVirusGame:
             os.path.join("images", "VirusImage.png"),
             os.path.join("images", "ResizedVirusImage.gif"),
         )
+        # Setup turtle screen
+        self.screen = turtle.Screen()
+        self.screen.setup(600, 600)
+        self.screen.bgpic(os.path.join("images", "CircuitImage.png"))
         
