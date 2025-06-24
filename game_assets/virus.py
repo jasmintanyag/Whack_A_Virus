@@ -12,3 +12,11 @@ class Virus(GameElement):
 
     def hide(self):
         self.turtle.hideturtle()
+
+    def teleport(self):
+        x = random.randint(-280, 280)
+        y = random.randint(-280, 230)
+        self.turtle.goto(x, y)
+        self.screen.ontimer(self.teleport, 200)
+
+    
