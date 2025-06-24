@@ -5,3 +5,6 @@ class Scoreboard(GameElement):
     def __init__(self, screen):
         super().__init__(screen)
         self.score = 0
+        self.turtle.goto(0, 250)
+        self.turtle.color("red")
+        self.update()
