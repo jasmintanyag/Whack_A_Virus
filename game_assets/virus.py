@@ -6,3 +6,8 @@ class Virus(GameElement):
         super().__init__(screen)
         self.screen.addshape(image_path)
         self.turtle.shape(image_path)
+
+    def show(self):
+        self.turtle.showturtle()
+
+    
