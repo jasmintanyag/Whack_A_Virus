@@ -16,7 +16,7 @@ class Scoreboard(GameElement):
     def increment(self):
         self.score += 1
         winsound.PlaySound("sounds/score.wav", winsound.SND_ASYNC)
-        self.update
+        self.update()
 
     def show_game_over(self):
         self.turtle.clear()
