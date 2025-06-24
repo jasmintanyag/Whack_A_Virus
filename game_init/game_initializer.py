@@ -24,4 +24,9 @@ class WhackAVirusGame:
         self.screen = turtle.Screen()
         self.screen.setup(600, 600)
         self.screen.bgpic(os.path.join("images", "CircuitImage.png"))
+        # Game elements
+        self.scoreboard = Scoreboard(self.screen)
+        self.virus = Virus(self.screen, os.path.join("images", "ResizedVirusImage.gif"))
+        self.start_button = StartButton(self.screen, os.path.join("images", "startbutton.gif"))
+        self.timer = Timer(self.screen, 20, self.end_game)
         
