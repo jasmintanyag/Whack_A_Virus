@@ -15,4 +15,9 @@ class WhackAVirusGame:
         pygame.mixer.music.load(os.path.join("sounds", "background.wav"))
         self.gameover_sound = pygame.mixer.Sound(os.path.join("sounds", "gameover.wav"))
         self.score_sound = pygame.mixer.Sound(os.path.join("sounds", "score.wav"))
+        # Resize virus image and store in images folder
+        ImageHandler.resize_image(
+            os.path.join("images", "VirusImage.png"),
+            os.path.join("images", "ResizedVirusImage.gif"),
+        )
         
