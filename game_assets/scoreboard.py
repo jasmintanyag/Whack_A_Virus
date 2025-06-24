@@ -15,4 +15,5 @@ class Scoreboard(GameElement):
 
     def increment(self):
         self.score += 1
-        winsound.PlaySound("sounds/")
+        winsound.PlaySound("sounds/score.wav", winsound.SND_ASYNC)
+        self.update
