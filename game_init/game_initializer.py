@@ -51,4 +51,10 @@ class WhackAVirusGame:
         self.scoreboard.increment()
         self.score_sound.play()
 
+    def end_game(self):
+        self.virus.hide()
+        self.scoreboard.show_game_over()
+        pygame.mixer.music.stop()
+        self.gameover_sound.play()
+
     
