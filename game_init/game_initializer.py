@@ -11,22 +11,30 @@ class WhackAVirusGame:
     def __init__(self):
         # Initialize pygame mixer
         pygame.mixer.init()
+
         # Load sounds from sounds folder
         pygame.mixer.music.load(os.path.join("sounds", "background.wav"))
         self.gameover_sound = pygame.mixer.Sound(os.path.join("sounds", "gameover.wav"))
         self.score_sound = pygame.mixer.Sound(os.path.join("sounds", "score.wav"))
+
         # Resize virus image and store in images folder
         ImageHandler.resize_image(
             os.path.join("images", "VirusImage.png"),
             os.path.join("images", "ResizedVirusImage.gif"),
         )
+
         # Setup turtle screen
         self.screen = turtle.Screen()
         self.screen.setup(600, 600)
         self.screen.bgpic(os.path.join("images", "CircuitImage.png"))
+
         # Game elements
         self.scoreboard = Scoreboard(self.screen)
         self.virus = Virus(self.screen, os.path.join("images", "ResizedVirusImage.gif"))
         self.start_button = StartButton(self.screen, os.path.join("images", "startbutton.gif"))
         self.timer = Timer(self.screen, 20, self.end_game)
-        
+
+        # Bind start button
+        self.start_button.on_click(self.start_game)
+
+    
