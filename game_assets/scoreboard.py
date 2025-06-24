@@ -6,5 +6,5 @@ class Scoreboard(GameElement):
         super().__init__(screen)
         self.score = 0
         self.turtle.goto(0, 250)
-        self.turtle.color("red")
+        self.turtle.color("yellow")
         self.update()
