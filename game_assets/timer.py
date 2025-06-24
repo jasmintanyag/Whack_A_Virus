@@ -8,4 +8,8 @@ class Timer(GameElement):
         self.turtle.goto(0, 220)
         self.turtle.color("white")
 
+    def start(self):
+        self.time = 45
+        self.update()
+
     
