@@ -37,4 +37,14 @@ class WhackAVirusGame:
         # Bind start button
         self.start_button.on_click(self.start_game)
 
+    def start_game(self, x, y):
+        self.scoreboard.score = 0
+        self.scoreboard.update()
+        self.timer.start()
+        self.virus.teleport()
+        self.start_button.hide()
+        self.virus.show()
+        self.virus.on_click(self.virus_clicked)
+        pygame.mixer.music.play(-1) # Loops bg music
+
     
