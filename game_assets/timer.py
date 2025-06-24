@@ -12,4 +12,11 @@ class Timer(GameElement):
         self.time = 45
         self.update()
 
-    
+    def update(self):
+        self.turtle.clear()
+        self.turtle.write(f"Time: {self.time}s", align="center", font=("Momcake", 20, "normal"))
+        if self.time > 0:
+            self.time -= 1
+            self.screen.ontimer(self.update, 1000)
+        else:
+            self.callback()
