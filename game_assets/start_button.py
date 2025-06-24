@@ -8,4 +8,7 @@ class StartButton(GameElement):
         self.turtle.goto(0, 50)
         self.turtle.showturtle()
 
+    def on_click(self, callback):
+        self.turtle.onclick(callback)
+
     
