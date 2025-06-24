@@ -9,3 +9,6 @@ from game_assets.start_button import StartButton
 
 class WhackAVirusGame:
     def __init__(self):
+        # Initialize pygame mixer
+        pygame.mixer.init()
+        
