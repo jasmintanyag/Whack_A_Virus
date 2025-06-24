@@ -19,4 +19,5 @@ class Virus(GameElement):
         self.turtle.goto(x, y)
         self.screen.ontimer(self.teleport, 200)
 
-    
+    def on_click(self, callback):
+        self.turtle.onclick(callback)
