@@ -8,3 +8,8 @@ class Scoreboard(GameElement):
         self.turtle.goto(0, 250)
         self.turtle.color("yellow")
         self.update()
+
+    def update(self):
+        self.turtle.clear()
+        self.turtle.write(f"Score: {self.score}", align="center", font=("Momcake", 24, "normal"))
+        
