@@ -11,4 +11,5 @@ class StartButton(GameElement):
     def on_click(self, callback):
         self.turtle.onclick(callback)
 
-    
+    def hide(self):
+        self.turtle.hideturtle()
