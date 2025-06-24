@@ -10,4 +10,5 @@ class Virus(GameElement):
     def show(self):
         self.turtle.showturtle()
 
-    
+    def hide(self):
+        self.turtle.hideturtle()
